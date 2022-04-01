@@ -1,4 +1,8 @@
-#SteakStake .section_body .section_flex {
+#SteakStake #Section1 {
+  margin-bottom: 3.7rem;
+}
+
+#SteakStake #Section1 .section_body .section_flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7,7 +11,7 @@
           align-items: center;
 }
 
-#SteakStake .section_body .section_flex .flex_box {
+#SteakStake #Section1 .section_body .section_flex .flex_box {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -20,17 +24,17 @@
   padding-bottom: 1.5rem;
 }
 
-#SteakStake .section_body .section_flex .flex_box.wallet_balance_flex {
+#SteakStake #Section1 .section_body .section_flex .flex_box.wallet_balance_flex {
   background: transparent;
   padding-bottom: 0rem;
   padding: 0px;
 }
 
-#SteakStake .section_body .section_flex .flex_box:first-child {
+#SteakStake #Section1 .section_body .section_flex .flex_box:first-child {
   margin-right: 1.4rem;
 }
 
-#SteakStake .section_body .section_flex .flex_box .meat_box {
+#SteakStake #Section1 .section_body .section_flex .flex_box .meat_box {
   width: 14.3rem;
   height: 11.6rem;
   border-radius: 1rem;
@@ -43,65 +47,65 @@
   position: relative;
 }
 
-#SteakStake .section_body .section_flex .flex_box .meat_box > * {
+#SteakStake #Section1 .section_body .section_flex .flex_box .meat_box > * {
   display: block;
   color: var(--text-900);
 }
 
-#SteakStake .section_body .section_flex .flex_box .meat_box strong {
+#SteakStake #Section1 .section_body .section_flex .flex_box .meat_box strong {
   font-size: 1.3rem;
   font-weight: 700;
 }
 
-#SteakStake .section_body .section_flex .flex_box .meat_box span {
+#SteakStake #Section1 .section_body .section_flex .flex_box .meat_box span {
   font-size: 0.9rem;
 }
 
-#SteakStake .section_body .section_flex .flex_box .meat_box svg {
+#SteakStake #Section1 .section_body .section_flex .flex_box .meat_box svg {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
 }
 
-#SteakStake .section_body .section_flex .flex_box .meat_box .img_frame {
+#SteakStake #Section1 .section_body .section_flex .flex_box .meat_box .img_frame {
   position: absolute;
   bottom: 1.1rem;
   right: 1.2rem;
 }
 
-#SteakStake .section_body .section_flex .flex_box .flex_box_list_content strong {
+#SteakStake #Section1 .section_body .section_flex .flex_box .flex_box_list_content strong {
   display: block;
   font-weight: 700;
 }
 
-#SteakStake .section_body .section_flex .flex_box .flex_box_list_content li {
+#SteakStake #Section1 .section_body .section_flex .flex_box .flex_box_list_content li {
   color: var(--text-900);
 }
 
-#SteakStake .section_body .section_flex .flex_box .flex_box_list_content li:first-child {
+#SteakStake #Section1 .section_body .section_flex .flex_box .flex_box_list_content li:first-child {
   font-size: 0.873rem;
   margin-bottom: 1rem;
 }
 
-#SteakStake .section_body .section_flex .flex_box .flex_box_list_content li:first-child strong {
+#SteakStake #Section1 .section_body .section_flex .flex_box .flex_box_list_content li:first-child strong {
   font-size: 1.3rem;
 }
 
-#SteakStake .section_body .section_flex .flex_box .flex_box_list_content li:nth-of-type(2) {
+#SteakStake #Section1 .section_body .section_flex .flex_box .flex_box_list_content li:nth-of-type(2) {
   font-size: 0.873rem;
   margin-bottom: 0.4rem;
 }
 
-#SteakStake .section_body .section_flex .flex_box .flex_box_list_content li:nth-of-type(2) strong {
+#SteakStake #Section1 .section_body .section_flex .flex_box .flex_box_list_content li:nth-of-type(2) strong {
   font-size: 0.9rem;
 }
 
-#SteakStake .section_body .section_flex .flex_box .flex_box_list_content li:nth-of-type(3) {
+#SteakStake #Section1 .section_body .section_flex .flex_box .flex_box_list_content li:nth-of-type(3) {
   font-size: 0.567rem;
   margin-bottom: 1.5rem;
 }
 
-#SteakStake .section_body .section_flex .flex_box .flex_box_list_content li:nth-of-type(4) .btn_connect_wallet {
+#SteakStake #Section1 .section_body .section_flex .flex_box .flex_box_list_content li:nth-of-type(4) .btn_connect_wallet {
   background: -webkit-gradient(linear, left top, right top, color-stop(-4.51%, #fab674), color-stop(107.64%, #9e6138));
   background: linear-gradient(90deg, #fab674 -4.51%, #9e6138 107.64%);
   -webkit-box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
@@ -116,12 +120,12 @@
   cursor: pointer;
 }
 
-#SteakStake .section_body .section_flex .flex_box .wallet_balance_list {
+#SteakStake #Section1 .section_body .section_flex .flex_box .wallet_balance_list {
   color: var(--text-900);
   width: 100%;
 }
 
-#SteakStake .section_body .section_flex .flex_box .wallet_balance_list li {
+#SteakStake #Section1 .section_body .section_flex .flex_box .wallet_balance_list li {
   background: var(--text-white);
   margin-bottom: 1.4rem;
   border-radius: 1rem;
@@ -134,35 +138,35 @@
   padding: 0.5rem 1.4rem 0.5rem 0rem;
 }
 
-#SteakStake .section_body .section_flex .flex_box .wallet_balance_list li:last-child {
+#SteakStake #Section1 .section_body .section_flex .flex_box .wallet_balance_list li:last-child {
   margin-bottom: 0px;
 }
 
-#SteakStake .section_body .section_flex .flex_box .wallet_balance_list li .content_box {
+#SteakStake #Section1 .section_body .section_flex .flex_box .wallet_balance_list li .content_box {
   margin-left: 0.816rem;
 }
 
-#SteakStake .section_body .section_flex .flex_box .wallet_balance_list li .content_box h3 {
+#SteakStake #Section1 .section_body .section_flex .flex_box .wallet_balance_list li .content_box h3 {
   font-size: 0.873rem;
   margin-bottom: 0.041rem;
 }
 
-#SteakStake .section_body .section_flex .flex_box .wallet_balance_list li .content_box strong {
+#SteakStake #Section1 .section_body .section_flex .flex_box .wallet_balance_list li .content_box strong {
   font-weight: 1.3rem;
   display: block;
   margin-bottom: -1rem;
   font-weight: 700;
 }
 
-#SteakStake .section_body .section_flex .flex_box .wallet_balance_list li .content_box span {
+#SteakStake #Section1 .section_body .section_flex .flex_box .wallet_balance_list li .content_box span {
   font-size: 0.9rem;
 }
 
-#SteakStake .section_body .section_flex .flex_box .wallet_balance_list li .btn_box {
+#SteakStake #Section1 .section_body .section_flex .flex_box .wallet_balance_list li .btn_box {
   margin-left: auto;
 }
 
-#SteakStake .section_body .section_flex .flex_box .wallet_balance_list li .btn_box button {
+#SteakStake #Section1 .section_body .section_flex .flex_box .wallet_balance_list li .btn_box button {
   font-size: 0.873rem;
   background: var(--text-13);
   -webkit-box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
@@ -173,5 +177,139 @@
   color: var(--text-white);
   padding: 0.6rem;
   cursor: pointer;
+}
+
+#SteakStake #Section2 {
+  margin-bottom: 2.6rem;
+}
+
+#SteakStake #Section2 .section_box_wrapper {
+  background: var(--text-white);
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_1 > img {
+  min-width: 6.81rem;
+  height: 3.8rem;
+  margin-right: 1.6rem;
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_1 .section_content_list li:nth-of-type(1) {
+  font-size: 1.4rem;
+  color: var(--text-900);
+  font-weight: 900;
+  margin-bottom: 0.7rem;
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_1 .section_content_list li:nth-of-type(2) {
+  font-size: 0.873rem;
+  color: var(--text-900);
+  margin-bottom: 0.8rem;
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_1 .section_content_list li:nth-of-type(3) {
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-1.45%, #fab573), color-stop(29.19%, #aa6c40));
+  background: linear-gradient(90deg, #fab573 -1.45%, #aa6c40 29.19%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_1 .section_content_list li:nth-of-type(4) {
+  color: var(--text-900);
+  font-size: 0.9rem;
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_1 .section_content_list li:nth-of-type(4) strong {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_2 {
+  min-width: 30rem;
+  margin-left: auto;
+  padding-left: 1.9rem;
+  border-left: 1px solid #e8e5ea;
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_2 .section_content_list li {
+  color: var(--text-900);
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_2 .section_content_list li:nth-of-type(1) {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_2 .section_content_list li:nth-of-type(1) span {
+  display: block;
+  font-size: 0.9rem;
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_2 .section_content_list li:nth-of-type(2) {
+  font-size: 0.9rem;
+  margin-bottom: 1.6rem;
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_2 .section_content_list li:nth-of-type(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_2 .section_content_list li:nth-of-type(3) span {
+  font-size: 1rem;
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_2 .section_content_list li:nth-of-type(3) strong {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_2 .section_content_list li:nth-of-type(4).dropdown_btn_list_wrapper .dropdown_btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  border: 1px solid var(--text-74);
+  -webkit-filter: drop-shadow(0px 4px 10px rgba(201, 148, 12, 0.1));
+          filter: drop-shadow(0px 4px 10px rgba(201, 148, 12, 0.1));
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--text-74);
+  background: transparent;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  padding: 0.4rem;
 }
 /*# sourceMappingURL=SteakStake.css.map */

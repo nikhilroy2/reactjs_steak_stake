@@ -1,147 +1,268 @@
 #SteakStake {
-  .section_body {
-    .section_flex {
-      display: flex;
-      align-items: center;
-      .flex_box {
-        flex-grow: 1;
-        padding: 0.9rem;
-        background: var(--text-white);
-        border-radius: 1rem;
+  #Section1 {
+    margin-bottom: 3.7rem;
+    .section_body {
+      .section_flex {
         display: flex;
-        padding-bottom: 1.5rem;
-        &.wallet_balance_flex {
-          background: transparent;
-          padding-bottom: 0rem;
-          padding: 0px;
-        }
-        $font_sm: 0.873rem;
-        &:first-child {
-          margin-right: 1.4rem;
-        }
-        .meat_box {
-          width: 14.3rem;
-          height: 11.6rem;
-          border-radius: 1rem;
+        align-items: center;
+        .flex_box {
+          flex-grow: 1;
           padding: 0.9rem;
-          margin-right: 1.4rem;
-          background: linear-gradient(
-            90deg,
-            rgba(250, 183, 116, 0.1) -4.51%,
-            rgba(225, 152, 88, 0.1) 107.64%
-          );
-          //   opacity: 0.1;
-          box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
-          position: relative;
-          & > * {
-            display: block;
+          background: var(--text-white);
+          border-radius: 1rem;
+          display: flex;
+          padding-bottom: 1.5rem;
+          &.wallet_balance_flex {
+            background: transparent;
+            padding-bottom: 0rem;
+            padding: 0px;
+          }
+          $font_sm: 0.873rem;
+          &:first-child {
+            margin-right: 1.4rem;
+          }
+          .meat_box {
+            width: 14.3rem;
+            height: 11.6rem;
+            border-radius: 1rem;
+            padding: 0.9rem;
+            margin-right: 1.4rem;
+            background: linear-gradient(
+              90deg,
+              rgba(250, 183, 116, 0.1) -4.51%,
+              rgba(225, 152, 88, 0.1) 107.64%
+            );
+            //   opacity: 0.1;
+            box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
+            position: relative;
+            & > * {
+              display: block;
+              color: var(--text-900);
+            }
+            strong {
+              font-size: 1.3rem;
+              font-weight: 700;
+            }
+            span {
+              font-size: 0.9rem;
+            }
+            svg {
+              position: absolute;
+              top: 0.5rem;
+              right: 0.5rem;
+            }
+            .img_frame {
+              position: absolute;
+              bottom: 1.1rem;
+              right: 1.2rem;
+            }
+          }
+          .flex_box_list_content {
+            strong {
+              display: block;
+              font-weight: 700;
+            }
+            li {
+              color: var(--text-900);
+
+              &:first-child {
+                font-size: $font_sm;
+                margin-bottom: 1rem;
+                strong {
+                  font-size: 1.3rem;
+                }
+              }
+              &:nth-of-type(2) {
+                font-size: $font_sm;
+                margin-bottom: 0.4rem;
+                strong {
+                  font-size: 0.9rem;
+                }
+              }
+              &:nth-of-type(3) {
+                font-size: 0.567rem;
+                margin-bottom: 1.5rem;
+              }
+              &:nth-of-type(4) {
+                .btn_connect_wallet {
+                  background: linear-gradient(
+                    90deg,
+                    #fab674 -4.51%,
+                    #9e6138 107.64%
+                  );
+                  box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
+                  border-radius: 5px;
+                  border: none;
+                  outline: none;
+                  color: var(--text-white);
+                  font-size: 0.787rem;
+                  width: 100%;
+                  min-height: 2.3rem;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+          .wallet_balance_list {
             color: var(--text-900);
-          }
-          strong {
-            font-size: 1.3rem;
-            font-weight: 700;
-          }
-          span {
-            font-size: 0.9rem;
-          }
-          svg {
-            position: absolute;
-            top: 0.5rem;
-            right: 0.5rem;
-          }
-          .img_frame {
-            position: absolute;
-            bottom: 1.1rem;
-            right: 1.2rem;
+            width: 100%;
+            li {
+              background: var(--text-white);
+              margin-bottom: 1.4rem;
+              border-radius: 1rem;
+              display: flex;
+              align-items: center;
+              padding: 0.5rem 1.4rem 0.5rem 0rem;
+              &:last-child {
+                margin-bottom: 0px;
+              }
+              .content_box {
+                margin-left: 0.816rem;
+                h3 {
+                  font-size: $font_sm;
+                  margin-bottom: 0.041rem;
+                }
+                strong {
+                  font-weight: 1.3rem;
+                  display: block;
+                  margin-bottom: -1rem;
+                  font-weight: 700;
+                }
+                span {
+                  font-size: 0.9rem;
+                }
+              }
+              .btn_box {
+                margin-left: auto;
+                button {
+                  font-size: $font_sm;
+                  background: var(--text-13);
+                  box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
+                  border-radius: 5px;
+                  border: none;
+                  outline: none;
+                  color: var(--text-white);
+                  padding: 0.6rem;
+                  cursor: pointer;
+                }
+              }
+            }
           }
         }
-        .flex_box_list_content {
-          strong {
-            display: block;
-            font-weight: 700;
-          }
-          li {
-            color: var(--text-900);
+      }
+    }
+  }
 
-            &:first-child {
-              font-size: $font_sm;
-              margin-bottom: 1rem;
-              strong {
-                font-size: 1.3rem;
-              }
+  #Section2 {
+    margin-bottom: 2.6rem;
+    .section_box_wrapper {
+      background: var(--text-white);
+      border-radius: 10px;
+      padding: 1.5rem;
+      display: flex;
+      $font_sm: 0.873rem;
+      $font_md: 0.9rem;
+      $font_lg: 1.2rem;
+      $font_xl: 1.4rem;
+      .section_body_box_1 {
+        display: flex;
+        & > img {
+          min-width: 6.81rem;
+          height: 3.8rem;
+          margin-right: 1.6rem;
+        }
+        .section_content_list {
+          li {
+            &:nth-of-type(1) {
+              font-size: $font_xl;
+              color: var(--text-900);
+              font-weight: 900;
+              margin-bottom: 0.7rem;
             }
             &:nth-of-type(2) {
               font-size: $font_sm;
-              margin-bottom: 0.4rem;
-              strong {
-                font-size: 0.9rem;
-              }
+              color: var(--text-900);
+              margin-bottom: 0.8rem;
             }
             &:nth-of-type(3) {
-              font-size: 0.567rem;
-              margin-bottom: 1.5rem;
+              font-size: $font_lg;
+              font-weight: 700;
+
+              background: linear-gradient(
+                90deg,
+                #fab573 -1.45%,
+                #aa6c40 29.19%
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+              text-fill-color: transparent;
+              margin-bottom: 2rem;
             }
             &:nth-of-type(4) {
-              .btn_connect_wallet {
-                background: linear-gradient(
-                  90deg,
-                  #fab674 -4.51%,
-                  #9e6138 107.64%
-                );
-                box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
-                border-radius: 5px;
-                border: none;
-                outline: none;
-                color: var(--text-white);
-                font-size: 0.787rem;
-                width: 100%;
-                min-height: 2.3rem;
-                cursor: pointer;
+              color: var(--text-900);
+              font-size: $font_md;
+              strong {
+                display: block;
+                font-size: $font_lg;
+                font-weight: 700;
               }
             }
           }
         }
-        .wallet_balance_list {
-          color: var(--text-900);
-          width: 100%;
+      }
+      .section_body_box_2 {
+        min-width: 30rem;
+        margin-left: auto;
+        padding-left: 1.9rem;
+        border-left: 1px solid #e8e5ea;
+        .section_content_list {
           li {
-            background: var(--text-white);
-            margin-bottom: 1.4rem;
-            border-radius: 1rem;
-            display: flex;
-            align-items: center;
-            padding: 0.5rem 1.4rem 0.5rem 0rem;
-            &:last-child {
-              margin-bottom: 0px;
+            color: var(--text-900);
+            &:nth-of-type(1) {
+              font-size: $font_lg;
+              margin-bottom: 1.2rem;
+              span {
+                display: block;
+                font-size: $font_md;
+              }
             }
-            .content_box {
-              margin-left: 0.816rem;
-              h3 {
-                font-size: $font_sm;
-                margin-bottom: 0.041rem;
+            &:nth-of-type(2) {
+              font-size: $font_md;
+              margin-bottom: 1.6rem;
+            }
+            &:nth-of-type(3) {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-bottom: 1.4rem;
+              span {
+                font-size: 1rem;
               }
               strong {
-                font-weight: 1.3rem;
-                display: block;
-                margin-bottom: -1rem;
+                font-size: $font_lg;
                 font-weight: 700;
               }
-              span {
-                font-size: 0.9rem;
-              }
             }
-            .btn_box {
-              margin-left: auto;
-              button {
-                font-size: $font_sm;
-                background: var(--text-13);
-                box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
-                border-radius: 5px;
-                border: none;
-                outline: none;
-                color: var(--text-white);
-                padding: 0.6rem;
-                cursor: pointer;
+            &:nth-of-type(4) {
+              &.dropdown_btn_list_wrapper {
+                .dropdown_btn {
+                  width: 100%;
+                  border: none;
+                  outline: none;
+                  border: 1px solid var(--text-74);
+                  filter: drop-shadow(0px 4px 10px rgba(201, 148, 12, 0.1));
+                  border-radius: 5px;
+                  font-size: 1rem;
+                  color: var(--text-74);
+                  background: transparent;
+                  cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-weight: 700;
+                  padding: 0.4rem;
+                }
               }
             }
           }
