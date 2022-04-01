@@ -84,22 +84,6 @@
                 margin-bottom: 1.5rem;
               }
               &:nth-of-type(4) {
-                .btn_connect_wallet {
-                  background: linear-gradient(
-                    90deg,
-                    #fab674 -4.51%,
-                    #9e6138 107.64%
-                  );
-                  box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
-                  border-radius: 5px;
-                  border: none;
-                  outline: none;
-                  color: var(--text-white);
-                  font-size: 0.787rem;
-                  width: 100%;
-                  min-height: 2.3rem;
-                  cursor: pointer;
-                }
               }
             }
           }
@@ -160,6 +144,7 @@
       border-radius: 10px;
       padding: 1.5rem;
       display: flex;
+      flex-flow: row wrap;
       $font_sm: 0.873rem;
       $font_md: 0.9rem;
       $font_lg: 1.2rem;
@@ -262,8 +247,68 @@
                   align-items: center;
                   font-weight: 700;
                   padding: 0.4rem;
+                  transition: 0.3s;
+                  &:hover {
+                    background: var(--text-74);
+                    color: var(--text-white);
+                    path {
+                      fill: var(--text-white);
+                    }
+                  }
                 }
               }
+            }
+          }
+        }
+      }
+      .dropdown_content_box {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(184, 184, 184, 0.5);
+        .content_box {
+          flex-grow: 1;
+          color: var(--text-900);
+          strong {
+            font-size: $font_xl;
+            width: 100%;
+            &.mb_sizer {
+              margin-bottom: 3rem;
+            }
+          }
+          a,
+          span {
+            font-size: $font_md;
+            color: var(--text-900);
+            text-decoration: none;
+          }
+          .card_box {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid var(--text-b8);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-right: 1rem;
+            margin-left: 1rem;
+            flex-flow: row wrap;
+            &.mx_0 {
+              margin-right: 0px;
+              margin-left: 0px;
+            }
+            .btn_harvest {
+              align-self: flex-end;
+              background: var(--text-b8);
+              color: var(--text-white);
+              padding: 0.6rem 1rem;
+              display: inline-block;
+              font-size: $font_md;
+              border-radius: 1rem;
+              border: none;
+              outline: none;
+              cursor: not-allowed;
             }
           }
         }
@@ -362,7 +407,7 @@
             background: var(--text-white);
             padding: 1.3rem 2.1rem;
             margin-bottom: 1.4rem;
-            &:last-child{
+            &:last-child {
               margin-bottom: 0px;
             }
             .flex_list_box {

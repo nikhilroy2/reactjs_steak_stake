@@ -105,21 +105,6 @@
   margin-bottom: 1.5rem;
 }
 
-#SteakStake #Section1 .section_body .section_flex .flex_box .flex_box_list_content li:nth-of-type(4) .btn_connect_wallet {
-  background: -webkit-gradient(linear, left top, right top, color-stop(-4.51%, #fab674), color-stop(107.64%, #9e6138));
-  background: linear-gradient(90deg, #fab674 -4.51%, #9e6138 107.64%);
-  -webkit-box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
-          box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  color: var(--text-white);
-  font-size: 0.787rem;
-  width: 100%;
-  min-height: 2.3rem;
-  cursor: pointer;
-}
-
 #SteakStake #Section1 .section_body .section_flex .flex_box .wallet_balance_list {
   color: var(--text-900);
   width: 100%;
@@ -190,6 +175,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 #SteakStake #Section2 .section_box_wrapper .section_body_box_1 {
@@ -311,6 +300,93 @@
           align-items: center;
   font-weight: 700;
   padding: 0.4rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_2 .section_content_list li:nth-of-type(4).dropdown_btn_list_wrapper .dropdown_btn:hover {
+  background: var(--text-74);
+  color: var(--text-white);
+}
+
+#SteakStake #Section2 .section_box_wrapper .section_body_box_2 .section_content_list li:nth-of-type(4).dropdown_btn_list_wrapper .dropdown_btn:hover path {
+  fill: var(--text-white);
+}
+
+#SteakStake #Section2 .section_box_wrapper .dropdown_content_box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(184, 184, 184, 0.5);
+}
+
+#SteakStake #Section2 .section_box_wrapper .dropdown_content_box .content_box {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: var(--text-900);
+}
+
+#SteakStake #Section2 .section_box_wrapper .dropdown_content_box .content_box strong {
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+#SteakStake #Section2 .section_box_wrapper .dropdown_content_box .content_box strong.mb_sizer {
+  margin-bottom: 3rem;
+}
+
+#SteakStake #Section2 .section_box_wrapper .dropdown_content_box .content_box a,
+#SteakStake #Section2 .section_box_wrapper .dropdown_content_box .content_box span {
+  font-size: 0.9rem;
+  color: var(--text-900);
+  text-decoration: none;
+}
+
+#SteakStake #Section2 .section_box_wrapper .dropdown_content_box .content_box .card_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid var(--text-b8);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+#SteakStake #Section2 .section_box_wrapper .dropdown_content_box .content_box .card_box.mx_0 {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+#SteakStake #Section2 .section_box_wrapper .dropdown_content_box .content_box .card_box .btn_harvest {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background: var(--text-b8);
+  color: var(--text-white);
+  padding: 0.6rem 1rem;
+  display: inline-block;
+  font-size: 0.9rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  cursor: not-allowed;
 }
 
 #SteakStake #Section3 .section_title {

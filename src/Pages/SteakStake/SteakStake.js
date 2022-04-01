@@ -27,7 +27,6 @@ const Section1 = () => {
                 <strong>Meat Earned</strong>
                 <strong>0.000</strong>
                 <span>~$0.0055</span>
-
                 <svg
                   width={10}
                   height={10}
@@ -120,13 +119,15 @@ const Section1 = () => {
 };
 
 const Section2 = () => {
+  const [toggleDropdown, setToggleDropdown] = useState(false);
+
   return (
     <section id="Section2">
       <div className="section_container">
         <div className="section_body">
           <div className="section_box_wrapper">
             <div className="section_body_box_1">
-              <img src={require("../../Static/img/img_b.png")} alt="" />
+              <img src={require("../../Static/img/img_b.png")} alt="img" />
               <ul className="section_content_list">
                 <li>VIP Pool</li>
                 <li>Stake BITX to earn BUSD and User Tier</li>
@@ -152,25 +153,126 @@ const Section2 = () => {
                     <strong>0.000</strong>
                   </li>
                   <li className="dropdown_btn_list_wrapper">
-                    <button className="dropdown_btn">
-                      Detail{" "}
-                      <svg
-                        width={14}
-                        height={14}
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7 8.75L7.41248 9.16248L7 9.57496L6.58752 9.16248L7 8.75ZM10.9125 5.66248L7.41248 9.16248L6.58752 8.33752L10.0875 4.83752L10.9125 5.66248ZM6.58752 9.16248L3.08752 5.66248L3.91248 4.83752L7.41248 8.33752L6.58752 9.16248Z"
-                          fill="#FAB674"
-                        />
-                      </svg>
+                    <button
+                      className="dropdown_btn"
+                      onClick={() => setToggleDropdown(!toggleDropdown)}
+                    >
+                      {toggleDropdown ? "Hide" : "Detail"}
+                      {toggleDropdown ? (
+                        <svg
+                          style={{ transform: "scaleY(-1)" }}
+                          width={14}
+                          height={14}
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7 8.75L7.41248 9.16248L7 9.57496L6.58752 9.16248L7 8.75ZM10.9125 5.66248L7.41248 9.16248L6.58752 8.33752L10.0875 4.83752L10.9125 5.66248ZM6.58752 9.16248L3.08752 5.66248L3.91248 4.83752L7.41248 8.33752L6.58752 9.16248Z"
+                            fill="#FAB674"
+                          />
+                        </svg>
+                      ) : (
+                        <svg
+                          width={14}
+                          height={14}
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7 8.75L7.41248 9.16248L7 9.57496L6.58752 9.16248L7 8.75ZM10.9125 5.66248L7.41248 9.16248L6.58752 8.33752L10.0875 4.83752L10.9125 5.66248ZM6.58752 9.16248L3.08752 5.66248L3.91248 4.83752L7.41248 8.33752L6.58752 9.16248Z"
+                            fill="#FAB674"
+                          />
+                        </svg>
+                      )}
                     </button>
                   </li>
                 </ul>
               </div>
             </div>
+
+            {toggleDropdown && (
+              <div className="dropdown_content_box">
+                <div className="content_box">
+                  <ul>
+                    <li>
+                      <strong>Withdraw Fee 0%</strong>
+                    </li>
+                    <li>
+                      <a href="#" className="content_link">
+                        Get IDOL{" "}
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          strokeWidth={0}
+                          viewBox="0 0 512 512"
+                          className="inline text-base ml-1"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill="none"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={32}
+                            d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="content_link">
+                        View contract{" "}
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          strokeWidth={0}
+                          viewBox="0 0 512 512"
+                          className="inline text-base ml-1"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill="none"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={32}
+                            d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="content_box">
+                  <div className="card_box">
+                    <ul>
+                      <li>
+                        <strong>PEACH earned</strong>
+                      </li>
+                      <li>
+                        <span>0.000</span>
+                      </li>
+                      <li>
+                        <span>~$0.00</span>
+                      </li>
+                    </ul>
+                    <button className="btn_harvest">Harvest</button>
+                  </div>
+                </div>
+                <div className="content_box">
+                  <div className="card_box mx_0">
+                    <strong className="mb_sizer">Start Staking</strong>
+                    <button className="btn_connect_wallet">
+                      Connect Wallet
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

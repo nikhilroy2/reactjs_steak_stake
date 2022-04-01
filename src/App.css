@@ -22,6 +22,7 @@
   --text-13: #321513;
   --text-74: #fab674;
   --text-38: #9e6138;
+  --text-b8: #b8b8b8;
   --family-dm: "DM Sans", sans-serif;
   --family-poppins: "Poppins", sans-serif;
 }
@@ -58,5 +59,20 @@ h4.title {
   max-width: 915px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.btn_connect_wallet {
+  background: -webkit-gradient(linear, left top, right top, color-stop(-4.51%, #fab674), color-stop(107.64%, #9e6138));
+  background: linear-gradient(90deg, #fab674 -4.51%, #9e6138 107.64%);
+  -webkit-box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
+          box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: var(--text-white);
+  font-size: 0.787rem;
+  width: 100%;
+  min-height: 2.3rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=App.css.map */
