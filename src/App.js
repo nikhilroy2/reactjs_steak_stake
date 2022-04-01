@@ -4,7 +4,7 @@ import Base from "./Layout/Base/Base";
 function App() {
   return (
     <div className="App">
-      <Base>Hello World</Base>
+      <Base></Base>
     </div>
   );
 }

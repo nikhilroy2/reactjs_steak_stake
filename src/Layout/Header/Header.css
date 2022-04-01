@@ -1,0 +1,107 @@
+#Header {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: rgba(255, 255, 255, 0.38);
+}
+
+#Header #header_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Header #header_nav .nav_list_menu,
+#Header #header_nav .nav_list_user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Header #header_nav .nav_list_menu a,
+#Header #header_nav .nav_list_user a {
+  display: inline-block;
+}
+
+#Header #header_nav .logo_link {
+  margin-right: 2.7rem;
+  display: inline-block;
+}
+
+#Header #header_nav .nav_list_menu a {
+  font-size: 1.301rem;
+  color: var(--text-100) !important;
+  text-decoration: none;
+  margin-right: 2.928rem;
+  font-family: var(--family-dm);
+}
+
+#Header #header_nav .nav_list_menu a.active_link {
+  color: var(--text-51) !important;
+}
+
+#Header #header_nav .nav_list_user li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Header #header_nav .nav_list_user .nav_light_btn {
+  background: var(--text-white);
+  color: var(--text-23);
+  border: none;
+  outline: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 7.1rem;
+  height: 2.3rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  margin-right: 0.9rem;
+  cursor: pointer;
+  font-family: var(--family-poppins);
+}
+
+#Header #header_nav .nav_list_user li:last-child .nav_light_btn {
+  margin-right: 0px;
+}
+
+#Header #header_nav .nav_list_user .connect_btn {
+  color: var(--text-black);
+  font-size: 1rem;
+  font-family: var(--family-dm);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e47e5e), to(rgba(250, 182, 116, 0.94)));
+  background: linear-gradient(180deg, #e47e5e 0%, rgba(250, 182, 116, 0.94) 100%);
+  -webkit-box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1), 0px 0px 7px rgba(255, 190, 19, 0.1);
+          box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1), 0px 0px 7px rgba(255, 190, 19, 0.1);
+  border-radius: 39px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 11.9rem;
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 1.5rem;
+  font-weight: bold;
+}
+/*# sourceMappingURL=Header.css.map */
