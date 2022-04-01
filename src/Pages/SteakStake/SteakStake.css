@@ -416,4 +416,84 @@
   display: inline-block;
   border-radius: 5.9rem;
 }
+
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list li {
+  border-radius: 1rem;
+  background: var(--text-white);
+  padding: 1.3rem 2.1rem;
+  margin-bottom: 1.4rem;
+}
+
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list li:last-child {
+  margin-bottom: 0px;
+}
+
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(1) .currency {
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  color: var(--text-900);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(1) .rank {
+  font-size: 0.9rem;
+  color: var(--text-white);
+  background: -webkit-gradient(linear, left top, right top, color-stop(-4.51%, #fab674), color-stop(107.64%, #9e6138));
+  background: linear-gradient(90deg, #fab674 -4.51%, #9e6138 107.64%);
+  -webkit-box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
+          box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
+  border-radius: 17px;
+  padding: 2px 9px;
+  display: inline-block;
+}
+
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(2), #SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(3), #SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(4) {
+  font-size: 0.717rem;
+  color: var(--text-900);
+}
+
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(2) strong, #SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(3) strong, #SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(4) strong {
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(5) button.btn_dropdown_details {
+  color: var(--text-74);
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
 /*# sourceMappingURL=SteakStake.css.map */

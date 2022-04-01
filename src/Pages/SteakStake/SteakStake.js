@@ -181,6 +181,38 @@ const Section2 = () => {
 const Section3 = () => {
   const [tabActive, setTabActive] = useState(true);
 
+  const token_list_object = [
+    {
+      id: 1,
+      token_img: require("../../Static/img/t.png"),
+      token_name: "USDT-BITX",
+      token_rank: "5x",
+      earned: "0.000",
+      app: "160.22%",
+      liquidity: "$85",
+      details: [],
+    },
+    {
+      id: 2,
+      token_img: require("../../Static/img/d.png"),
+      token_name: "BUSD-BITX",
+      token_rank: "10x",
+      earned: "0.000",
+      app: "250.22%",
+      liquidity: "$850",
+      details: [],
+    },
+    {
+      id: 3,
+      token_img: require("../../Static/img/x.png"),
+      token_name: "BITX-USDT",
+      token_rank: "20x",
+      earned: "0.000",
+      app: "560.22%",
+      liquidity: "$782",
+      details: [],
+    },
+  ];
   return (
     <section id="Section3">
       <div className="section_container">
@@ -209,6 +241,57 @@ const Section3 = () => {
         <div className="section_body">
           <div className="section_body_title">
             <h4 className="title">LP token</h4>
+          </div>
+          <div className="section_body_content">
+            <ul className="lp_token_list">
+              {token_list_object.map((v) => {
+                return (
+                  <li key={v.id}>
+                    <div className="flex_list_box">
+                      <div className="list_box">
+                        <img src={v.token_img} alt="" />
+                        <strong className="currency">{v.token_name}</strong>
+                        <span className="rank">{v.token_rank}</span>
+                      </div>
+                      <div className="list_box">
+                        Earned
+                        <strong>{v.earned}</strong>
+                      </div>
+                      <div className="list_box">
+                        APR
+                        <strong>
+                          {v.app} <CalculatorsSvg></CalculatorsSvg>
+                        </strong>
+                      </div>
+                      <div className="list_box">
+                        Liquidity
+                        <strong>{v.liquidity}</strong>
+                      </div>
+                      <div className="list_box list_box_dropdown_details">
+                        <button className="btn_dropdown_details">
+                          Details{" "}
+                          <svg
+                            width={14}
+                            height={14}
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7 8.75L7.41248 9.16248L7 9.57496L6.58752 9.16248L7 8.75ZM10.9125 5.66248L7.41248 9.16248L6.58752 8.33752L10.0875 4.83752L10.9125 5.66248ZM6.58752 9.16248L3.08752 5.66248L3.91248 4.83752L7.41248 8.33752L6.58752 9.16248Z"
+                              fill="#FAB674"
+                            />
+                          </svg>
+                        </button>
+
+                        {/* for dropdown view letter */}
+                        {/* <ul className="dropdown_details_view"><li></li></ul> */}
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
       </div>

@@ -352,6 +352,78 @@
       }
     }
     .section_body {
+      .section_body_content {
+        $font_9: 0.9rem;
+        $font_10: 1rem;
+        $font_7: 0.717rem;
+        .lp_token_list {
+          li {
+            border-radius: 1rem;
+            background: var(--text-white);
+            padding: 1.3rem 2.1rem;
+            margin-bottom: 1.4rem;
+            &:last-child{
+              margin-bottom: 0px;
+            }
+            .flex_list_box {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              .list_box {
+                &:nth-of-type(1) {
+                  display: flex;
+                  align-items: center;
+                  .currency {
+                    margin-left: 0.8rem;
+                    margin-right: 0.8rem;
+                    color: var(--text-900);
+                    font-size: $font_10;
+                    font-weight: 700;
+                  }
+                  .rank {
+                    font-size: $font_9;
+                    color: var(--text-white);
+                    background: linear-gradient(
+                      90deg,
+                      #fab674 -4.51%,
+                      #9e6138 107.64%
+                    );
+                    box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
+                    border-radius: 17px;
+                    padding: 2px 9px;
+                    display: inline-block;
+                  }
+                }
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(4) {
+                  font-size: $font_7;
+                  color: var(--text-900);
+                  strong {
+                    display: block;
+                    text-align: center;
+                    font-size: $font_9;
+                    font-weight: 700;
+                  }
+                }
+                &:nth-of-type(5) {
+                  button.btn_dropdown_details {
+                    color: var(--text-74);
+                    font-size: $font_10;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    font-weight: 700;
+                    display: inline-flex;
+                    align-items: center;
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
