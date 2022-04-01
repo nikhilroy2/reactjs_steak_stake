@@ -1,0 +1,16 @@
+#Base {
+  position: relative;
+  .Base_design_wrapper {
+    pointer-events: none;
+    user-select: none;
+    .design_left {
+      position: absolute;
+      top: 7.4rem;
+    }
+    .design_head {
+      position: absolute;
+      right: 8rem;
+      top: 40%;
+    }
+  }
+}

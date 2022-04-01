@@ -417,18 +417,29 @@
   border-radius: 5.9rem;
 }
 
-#SteakStake #Section3 .section_body .section_body_content .lp_token_list li {
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list > li {
   border-radius: 1rem;
   background: var(--text-white);
   padding: 1.3rem 2.1rem;
   margin-bottom: 1.4rem;
+  position: relative;
 }
 
-#SteakStake #Section3 .section_body .section_body_content .lp_token_list li:last-child {
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list > li::before {
+  content: "";
+  position: absolute;
+  right: calc(100% + 15px);
+  width: 7.5rem;
+  top: 0px;
+  height: 5.6rem;
+  background: url("../../Static/img/img_token_side.png") center/contain no-repeat;
+}
+
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list > li:last-child {
   margin-bottom: 0px;
 }
 
-#SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box {
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list > li .flex_list_box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -440,7 +451,7 @@
           align-items: center;
 }
 
-#SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(1) {
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list > li .flex_list_box .list_box:nth-of-type(1) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -449,7 +460,7 @@
           align-items: center;
 }
 
-#SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(1) .currency {
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list > li .flex_list_box .list_box:nth-of-type(1) .currency {
   margin-left: 0.8rem;
   margin-right: 0.8rem;
   color: var(--text-900);
@@ -457,7 +468,7 @@
   font-weight: 700;
 }
 
-#SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(1) .rank {
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list > li .flex_list_box .list_box:nth-of-type(1) .rank {
   font-size: 0.9rem;
   color: var(--text-white);
   background: -webkit-gradient(linear, left top, right top, color-stop(-4.51%, #fab674), color-stop(107.64%, #9e6138));
@@ -469,19 +480,19 @@
   display: inline-block;
 }
 
-#SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(2), #SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(3), #SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(4) {
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list > li .flex_list_box .list_box:nth-of-type(2), #SteakStake #Section3 .section_body .section_body_content .lp_token_list > li .flex_list_box .list_box:nth-of-type(3), #SteakStake #Section3 .section_body .section_body_content .lp_token_list > li .flex_list_box .list_box:nth-of-type(4) {
   font-size: 0.717rem;
   color: var(--text-900);
 }
 
-#SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(2) strong, #SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(3) strong, #SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(4) strong {
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list > li .flex_list_box .list_box:nth-of-type(2) strong, #SteakStake #Section3 .section_body .section_body_content .lp_token_list > li .flex_list_box .list_box:nth-of-type(3) strong, #SteakStake #Section3 .section_body .section_body_content .lp_token_list > li .flex_list_box .list_box:nth-of-type(4) strong {
   display: block;
   text-align: center;
   font-size: 0.9rem;
   font-weight: 700;
 }
 
-#SteakStake #Section3 .section_body .section_body_content .lp_token_list li .flex_list_box .list_box:nth-of-type(5) button.btn_dropdown_details {
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list > li .flex_list_box .list_box:nth-of-type(5) button.btn_dropdown_details {
   color: var(--text-74);
   font-size: 1rem;
   background: transparent;

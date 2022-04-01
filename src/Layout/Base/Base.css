@@ -1,0 +1,23 @@
+#Base {
+  position: relative;
+}
+
+#Base .Base_design_wrapper {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#Base .Base_design_wrapper .design_left {
+  position: absolute;
+  top: 7.4rem;
+}
+
+#Base .Base_design_wrapper .design_head {
+  position: absolute;
+  right: 8rem;
+  top: 40%;
+}
+/*# sourceMappingURL=Base.css.map */
