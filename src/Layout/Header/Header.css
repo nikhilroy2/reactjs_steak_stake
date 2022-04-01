@@ -2,6 +2,16 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
   background: rgba(255, 255, 255, 0.38);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#Header.HeaderScrollActive {
+  background: rgba(255, 255, 255, 0.7);
 }
 
 #Header #header_nav {

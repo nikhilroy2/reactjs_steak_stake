@@ -292,7 +292,14 @@ const Section3 = () => {
       earned: "0.000",
       app: "160.22%",
       liquidity: "$85",
-      details: [],
+      details: {
+        withdraw_fee: "0%",
+        get_idol_link: "#",
+        view_contract_link: "#",
+        peach_earned_amount_1: "0.000",
+        peach_earned_amount_2: "~$0.00",
+        harvest_action: "#",
+      },
     },
     {
       id: 2,
@@ -302,7 +309,14 @@ const Section3 = () => {
       earned: "0.000",
       app: "250.22%",
       liquidity: "$850",
-      details: [],
+      details: {
+        withdraw_fee: "0%",
+        get_idol_link: "#",
+        view_contract_link: "#",
+        peach_earned_amount_1: "0.000",
+        peach_earned_amount_2: "~$0.00",
+        harvest_action: "#",
+      },
     },
     {
       id: 3,
@@ -312,9 +326,22 @@ const Section3 = () => {
       earned: "0.000",
       app: "560.22%",
       liquidity: "$782",
-      details: [],
+      details: {
+        withdraw_fee: "0%",
+        get_idol_link: "#",
+        view_contract_link: "#",
+        peach_earned_amount_1: "0.000",
+        peach_earned_amount_2: "~$0.00",
+        harvest_action: "#",
+      },
     },
   ];
+
+  const [isDropdownEnabled, setIsDropdownEnabled] = useState();
+
+  const dropdownDetailsHandle = (num) => {
+    setIsDropdownEnabled(num);
+  };
   return (
     <section id="Section3">
       <div className="section_container">
@@ -370,26 +397,135 @@ const Section3 = () => {
                         <strong>{v.liquidity}</strong>
                       </div>
                       <div className="list_box list_box_dropdown_details">
-                        <button className="btn_dropdown_details">
-                          Details{" "}
-                          <svg
-                            width={14}
-                            height={14}
-                            viewBox="0 0 14 14"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M7 8.75L7.41248 9.16248L7 9.57496L6.58752 9.16248L7 8.75ZM10.9125 5.66248L7.41248 9.16248L6.58752 8.33752L10.0875 4.83752L10.9125 5.66248ZM6.58752 9.16248L3.08752 5.66248L3.91248 4.83752L7.41248 8.33752L6.58752 9.16248Z"
-                              fill="#FAB674"
-                            />
-                          </svg>
+                        <button
+                          className="btn_dropdown_details"
+                          onClick={() => dropdownDetailsHandle(v.id)}
+                        >
+                          Details
+                          {isDropdownEnabled == v.id ? (
+                            <svg
+                              style={{ transform: "scaleY(-1)" }}
+                              width={14}
+                              height={14}
+                              viewBox="0 0 14 14"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M7 8.75L7.41248 9.16248L7 9.57496L6.58752 9.16248L7 8.75ZM10.9125 5.66248L7.41248 9.16248L6.58752 8.33752L10.0875 4.83752L10.9125 5.66248ZM6.58752 9.16248L3.08752 5.66248L3.91248 4.83752L7.41248 8.33752L6.58752 9.16248Z"
+                                fill="#FAB674"
+                              />
+                            </svg>
+                          ) : (
+                            <svg
+                              width={14}
+                              height={14}
+                              viewBox="0 0 14 14"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M7 8.75L7.41248 9.16248L7 9.57496L6.58752 9.16248L7 8.75ZM10.9125 5.66248L7.41248 9.16248L6.58752 8.33752L10.0875 4.83752L10.9125 5.66248ZM6.58752 9.16248L3.08752 5.66248L3.91248 4.83752L7.41248 8.33752L6.58752 9.16248Z"
+                                fill="#FAB674"
+                              />
+                            </svg>
+                          )}
                         </button>
 
                         {/* for dropdown view letter */}
                         {/* <ul className="dropdown_details_view"><li></li></ul> */}
                       </div>
                     </div>
+
+                    {isDropdownEnabled == v.id && (
+                      <div className="dropdown_content_box">
+                        <div className="content_box">
+                          <ul>
+                            <li>
+                              <strong>
+                                Withdraw Fee {v.details.withdraw_fee}
+                              </strong>
+                            </li>
+                            <li>
+                              <a
+                                href={v.details.get_idol_link}
+                                className="content_link"
+                              >
+                                Get IDOL{" "}
+                                <svg
+                                  stroke="currentColor"
+                                  fill="currentColor"
+                                  strokeWidth={0}
+                                  viewBox="0 0 512 512"
+                                  className="inline text-base ml-1"
+                                  height="1em"
+                                  width="1em"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    fill="none"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={32}
+                                    d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+                                  />
+                                </svg>
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href={v.details.view_contract_link}
+                                className="content_link"
+                              >
+                                View contract{" "}
+                                <svg
+                                  stroke="currentColor"
+                                  fill="currentColor"
+                                  strokeWidth={0}
+                                  viewBox="0 0 512 512"
+                                  className="inline text-base ml-1"
+                                  height="1em"
+                                  width="1em"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    fill="none"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={32}
+                                    d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+                                  />
+                                </svg>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div className="content_box">
+                          <div className="card_box">
+                            <ul>
+                              <li>
+                                <strong>PEACH earned</strong>
+                              </li>
+                              <li>
+                                <span>{v.details.peach_earned_amount_1}</span>
+                              </li>
+                              <li>
+                                <span>{v.details.peach_earned_amount_2}</span>
+                              </li>
+                            </ul>
+                            <button className="btn_harvest">Harvest</button>
+                          </div>
+                        </div>
+                        <div className="content_box">
+                          <div className="card_box mx_0">
+                            <strong className="mb_sizer">Start Staking</strong>
+                            <button className="btn_connect_wallet">
+                              Connect Wallet
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </li>
                 );
               })}

@@ -1,4 +1,8 @@
 #SteakStake {
+  $font_sm: 0.873rem;
+  $font_md: 0.9rem;
+  $font_lg: 1.2rem;
+  $font_xl: 1.4rem;
   #Section1 {
     margin-bottom: 3.7rem;
     .section_body {
@@ -145,10 +149,7 @@
       padding: 1.5rem;
       display: flex;
       flex-flow: row wrap;
-      $font_sm: 0.873rem;
-      $font_md: 0.9rem;
-      $font_lg: 1.2rem;
-      $font_xl: 1.4rem;
+
       .section_body_box_1 {
         display: flex;
         & > img {
@@ -261,58 +262,7 @@
           }
         }
       }
-      .dropdown_content_box {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 2rem;
-        padding-top: 2rem;
-        border-top: 1px solid rgba(184, 184, 184, 0.5);
-        .content_box {
-          flex-grow: 1;
-          color: var(--text-900);
-          strong {
-            font-size: $font_xl;
-            width: 100%;
-            &.mb_sizer {
-              margin-bottom: 3rem;
-            }
-          }
-          a,
-          span {
-            font-size: $font_md;
-            color: var(--text-900);
-            text-decoration: none;
-          }
-          .card_box {
-            display: flex;
-            justify-content: space-between;
-            border: 1px solid var(--text-b8);
-            padding: 1rem;
-            border-radius: 10px;
-            margin-right: 1rem;
-            margin-left: 1rem;
-            flex-flow: row wrap;
-            &.mx_0 {
-              margin-right: 0px;
-              margin-left: 0px;
-            }
-            .btn_harvest {
-              align-self: flex-end;
-              background: var(--text-b8);
-              color: var(--text-white);
-              padding: 0.6rem 1rem;
-              display: inline-block;
-              font-size: $font_md;
-              border-radius: 1rem;
-              border: none;
-              outline: none;
-              cursor: not-allowed;
-            }
-          }
-        }
-      }
+      
     }
   }
 
@@ -467,6 +417,64 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+
+
+  .dropdown_content_box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(184, 184, 184, 0.5);
+    .content_box {
+      li{
+        margin-bottom: 0!important;
+        padding: 0px!important;
+      }
+      flex-grow: 1;
+      color: var(--text-900);
+      strong {
+        font-size: $font_xl;
+        width: 100%;
+        &.mb_sizer {
+          margin-bottom: 3.3rem;
+        }
+      }
+      a,
+      span {
+        font-size: $font_md;
+        color: var(--text-900);
+        text-decoration: none;
+      }
+      .card_box {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid var(--text-b8);
+        padding: 1rem;
+        border-radius: 10px;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        flex-flow: row wrap;
+        &.mx_0 {
+          margin-right: 0px;
+          margin-left: 0px;
+        }
+        .btn_harvest {
+          align-self: flex-end;
+          background: var(--text-b8);
+          color: var(--text-white);
+          padding: 0.6rem 1rem;
+          display: inline-block;
+          font-size: $font_md;
+          border-radius: 1rem;
+          border: none;
+          outline: none;
+          cursor: not-allowed;
         }
       }
     }

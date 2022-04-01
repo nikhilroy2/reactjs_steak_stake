@@ -2,6 +2,13 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
   background: rgba(255, 255, 255, 0.38);
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+  transition: 0.3s;
+  &.HeaderScrollActive {
+    background: rgba(255, 255, 255, 0.7);
+  }
   @mixin flex-align-center {
     display: flex;
     align-items: center;
