@@ -52,8 +52,6 @@ function SteakStake(props) {
                   alt="img"
                 />
               </div>
-            </div>
-            <div className="flex_box">
               <ul className="flex_box_list_content">
                 <li>
                   Ready to claim :<strong>0.000</strong>
@@ -61,10 +59,42 @@ function SteakStake(props) {
                 <li>
                   To be claimed in 15 days :<strong>0.000</strong>
                 </li>
-                <li>(Auto renew 15 days release when you harvest again)</li>
+                <li>
+                  (Auto renew 15 days release when you harvest <br /> again)
+                </li>
 
                 <li>
                   <button className="btn_connect_wallet">Connect Wallet</button>
+                </li>
+              </ul>
+            </div>
+            <div className="flex_box wallet_balance_flex">
+              <ul className="wallet_balance_list">
+                <li>
+                  <img src={require("../../Static/img/img_b.png")} alt="" />
+                  <div className="content_box">
+                    <h3>BITX Wallet Balance</h3>
+                    <strong>0.0000</strong>
+                    <span>~$0.0000</span>
+                  </div>
+                  <div className="btn_box">
+                    <button>Buy BITX</button>
+                  </div>
+                </li>
+
+                <li>
+                  <img style={{height: '2.5rem', marginLeft: '1.2rem'}}
+                    src={require("../../Static/img/meat_box_frame.png")}
+                    alt=""
+                  />
+                  <div className="content_box">
+                    <h3>Meat Wallet Balance</h3>
+                    <strong>0.0000</strong>
+                    <span>~$0.0000</span>
+                  </div>
+                  <div className="btn_box">
+                    <button>Buy Meat</button>
+                  </div>
                 </li>
               </ul>
             </div>

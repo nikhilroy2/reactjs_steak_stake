@@ -8,6 +8,14 @@
         padding: 0.9rem;
         background: var(--text-white);
         border-radius: 1rem;
+        display: flex;
+        padding-bottom: 1.5rem;
+        &.wallet_balance_flex {
+          background: transparent;
+          padding-bottom: 0rem;
+          padding: 0px;
+        }
+        $font_sm: 0.873rem;
         &:first-child {
           margin-right: 1.4rem;
         }
@@ -15,7 +23,7 @@
           width: 14.3rem;
           height: 11.6rem;
           border-radius: 1rem;
-          padding: .9rem;
+          padding: 0.9rem;
           margin-right: 1.4rem;
           background: linear-gradient(
             90deg,
@@ -36,15 +44,106 @@
           span {
             font-size: 0.9rem;
           }
-          svg{
-              position: absolute;
-              top: .5rem;
-              right: .5rem;
+          svg {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
           }
-          .img_frame{
-              position: absolute;
-              bottom: 1.1rem;
-              right: 1.2rem;
+          .img_frame {
+            position: absolute;
+            bottom: 1.1rem;
+            right: 1.2rem;
+          }
+        }
+        .flex_box_list_content {
+          strong {
+            display: block;
+            font-weight: 700;
+          }
+          li {
+            color: var(--text-900);
+
+            &:first-child {
+              font-size: $font_sm;
+              margin-bottom: 1rem;
+              strong {
+                font-size: 1.3rem;
+              }
+            }
+            &:nth-of-type(2) {
+              font-size: $font_sm;
+              margin-bottom: 0.4rem;
+              strong {
+                font-size: 0.9rem;
+              }
+            }
+            &:nth-of-type(3) {
+              font-size: 0.567rem;
+              margin-bottom: 1.5rem;
+            }
+            &:nth-of-type(4) {
+              .btn_connect_wallet {
+                background: linear-gradient(
+                  90deg,
+                  #fab674 -4.51%,
+                  #9e6138 107.64%
+                );
+                box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                color: var(--text-white);
+                font-size: 0.787rem;
+                width: 100%;
+                min-height: 2.3rem;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .wallet_balance_list {
+          color: var(--text-900);
+          width: 100%;
+          li {
+            background: var(--text-white);
+            margin-bottom: 1.4rem;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1.4rem 0.5rem 0rem;
+            &:last-child {
+              margin-bottom: 0px;
+            }
+            .content_box {
+              margin-left: 0.816rem;
+              h3 {
+                font-size: $font_sm;
+                margin-bottom: 0.041rem;
+              }
+              strong {
+                font-weight: 1.3rem;
+                display: block;
+                margin-bottom: -1rem;
+                font-weight: 700;
+              }
+              span {
+                font-size: 0.9rem;
+              }
+            }
+            .btn_box {
+              margin-left: auto;
+              button {
+                font-size: $font_sm;
+                background: var(--text-13);
+                box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                color: var(--text-white);
+                padding: 0.6rem;
+                cursor: pointer;
+              }
+            }
           }
         }
       }

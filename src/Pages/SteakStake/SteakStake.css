@@ -14,6 +14,16 @@
   padding: 0.9rem;
   background: var(--text-white);
   border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 1.5rem;
+}
+
+#SteakStake .section_body .section_flex .flex_box.wallet_balance_flex {
+  background: transparent;
+  padding-bottom: 0rem;
+  padding: 0px;
 }
 
 #SteakStake .section_body .section_flex .flex_box:first-child {
@@ -24,7 +34,7 @@
   width: 14.3rem;
   height: 11.6rem;
   border-radius: 1rem;
-  padding: .9rem;
+  padding: 0.9rem;
   margin-right: 1.4rem;
   background: -webkit-gradient(linear, left top, right top, color-stop(-4.51%, rgba(250, 183, 116, 0.1)), color-stop(107.64%, rgba(225, 152, 88, 0.1)));
   background: linear-gradient(90deg, rgba(250, 183, 116, 0.1) -4.51%, rgba(225, 152, 88, 0.1) 107.64%);
@@ -49,13 +59,119 @@
 
 #SteakStake .section_body .section_flex .flex_box .meat_box svg {
   position: absolute;
-  top: .5rem;
-  right: .5rem;
+  top: 0.5rem;
+  right: 0.5rem;
 }
 
 #SteakStake .section_body .section_flex .flex_box .meat_box .img_frame {
   position: absolute;
   bottom: 1.1rem;
   right: 1.2rem;
+}
+
+#SteakStake .section_body .section_flex .flex_box .flex_box_list_content strong {
+  display: block;
+  font-weight: 700;
+}
+
+#SteakStake .section_body .section_flex .flex_box .flex_box_list_content li {
+  color: var(--text-900);
+}
+
+#SteakStake .section_body .section_flex .flex_box .flex_box_list_content li:first-child {
+  font-size: 0.873rem;
+  margin-bottom: 1rem;
+}
+
+#SteakStake .section_body .section_flex .flex_box .flex_box_list_content li:first-child strong {
+  font-size: 1.3rem;
+}
+
+#SteakStake .section_body .section_flex .flex_box .flex_box_list_content li:nth-of-type(2) {
+  font-size: 0.873rem;
+  margin-bottom: 0.4rem;
+}
+
+#SteakStake .section_body .section_flex .flex_box .flex_box_list_content li:nth-of-type(2) strong {
+  font-size: 0.9rem;
+}
+
+#SteakStake .section_body .section_flex .flex_box .flex_box_list_content li:nth-of-type(3) {
+  font-size: 0.567rem;
+  margin-bottom: 1.5rem;
+}
+
+#SteakStake .section_body .section_flex .flex_box .flex_box_list_content li:nth-of-type(4) .btn_connect_wallet {
+  background: -webkit-gradient(linear, left top, right top, color-stop(-4.51%, #fab674), color-stop(107.64%, #9e6138));
+  background: linear-gradient(90deg, #fab674 -4.51%, #9e6138 107.64%);
+  -webkit-box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
+          box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: var(--text-white);
+  font-size: 0.787rem;
+  width: 100%;
+  min-height: 2.3rem;
+  cursor: pointer;
+}
+
+#SteakStake .section_body .section_flex .flex_box .wallet_balance_list {
+  color: var(--text-900);
+  width: 100%;
+}
+
+#SteakStake .section_body .section_flex .flex_box .wallet_balance_list li {
+  background: var(--text-white);
+  margin-bottom: 1.4rem;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 1.4rem 0.5rem 0rem;
+}
+
+#SteakStake .section_body .section_flex .flex_box .wallet_balance_list li:last-child {
+  margin-bottom: 0px;
+}
+
+#SteakStake .section_body .section_flex .flex_box .wallet_balance_list li .content_box {
+  margin-left: 0.816rem;
+}
+
+#SteakStake .section_body .section_flex .flex_box .wallet_balance_list li .content_box h3 {
+  font-size: 0.873rem;
+  margin-bottom: 0.041rem;
+}
+
+#SteakStake .section_body .section_flex .flex_box .wallet_balance_list li .content_box strong {
+  font-weight: 1.3rem;
+  display: block;
+  margin-bottom: -1rem;
+  font-weight: 700;
+}
+
+#SteakStake .section_body .section_flex .flex_box .wallet_balance_list li .content_box span {
+  font-size: 0.9rem;
+}
+
+#SteakStake .section_body .section_flex .flex_box .wallet_balance_list li .btn_box {
+  margin-left: auto;
+}
+
+#SteakStake .section_body .section_flex .flex_box .wallet_balance_list li .btn_box button {
+  font-size: 0.873rem;
+  background: var(--text-13);
+  -webkit-box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
+          box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: var(--text-white);
+  padding: 0.6rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=SteakStake.css.map */
