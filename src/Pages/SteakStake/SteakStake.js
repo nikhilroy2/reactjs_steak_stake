@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SteakStake.css";
 import CalculatorsSvg from "../../Components/Icons/SvgIcons/CalculatorsSvg";
 function SteakStake(props) {
@@ -6,6 +6,7 @@ function SteakStake(props) {
     <div id="SteakStake">
       <Section1></Section1>
       <Section2></Section2>
+      <Section3></Section3>
     </div>
   );
 }
@@ -170,6 +171,44 @@ const Section2 = () => {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const Section3 = () => {
+  const [tabActive, setTabActive] = useState(true);
+
+  return (
+    <section id="Section3">
+      <div className="section_container">
+        <div className="section_title">
+          <div className="section_tab_control">
+            <div className="stakeBox">
+              <input type="checkbox" name="" id="stakedCheckbox" />
+              <label htmlFor="stakedCheckbox">Staked only</label>
+            </div>
+            <div className="tabBox">
+              <button
+                onClick={() => setTabActive(true)}
+                className={tabActive && "active_btn"}
+              >
+                Active
+              </button>
+              <button
+                onClick={() => setTabActive(false)}
+                className={!tabActive && "active_btn"}
+              >
+                Inactive
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="section_body">
+          <div className="section_body_title">
+            <h4 className="title">LP token</h4>
           </div>
         </div>
       </div>

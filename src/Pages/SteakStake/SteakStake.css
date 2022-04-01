@@ -312,4 +312,108 @@
   font-weight: 700;
   padding: 0.4rem;
 }
+
+#SteakStake #Section3 .section_title {
+  text-align: center;
+}
+
+#SteakStake #Section3 .section_title .section_tab_control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1rem;
+}
+
+#SteakStake #Section3 .section_title .section_tab_control .stakeBox {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-right: 1.2rem;
+}
+
+#SteakStake #Section3 .section_title .section_tab_control .stakeBox input {
+  display: none;
+}
+
+#SteakStake #Section3 .section_title .section_tab_control .stakeBox [for="stakedCheckbox"] {
+  position: relative;
+  color: var(--text-23);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#SteakStake #Section3 .section_title .section_tab_control .stakeBox [for="stakedCheckbox"]::before {
+  content: "";
+  position: absolute;
+  background: var(--text-900);
+  width: 2.6rem;
+  height: 1.4rem;
+  border-radius: 5.9rem;
+  right: calc(100% + 4px);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#SteakStake #Section3 .section_title .section_tab_control .stakeBox [for="stakedCheckbox"]::after {
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  position: absolute;
+  background: var(--text-white);
+  border-radius: 50%;
+  right: calc(100% + 18px);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#SteakStake #Section3 .section_title .section_tab_control .stakeBox input:checked ~ label::after {
+  right: calc(100% + 6px);
+}
+
+#SteakStake #Section3 .section_title .section_tab_control .tabBox {
+  background: var(--text-white);
+  border-radius: 5.9rem;
+  border: 0.8px solid #fab674;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#SteakStake #Section3 .section_title .section_tab_control .tabBox button {
+  color: var(--text-38);
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: transparent;
+  margin: 0px;
+  margin-right: 7px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#SteakStake #Section3 .section_title .section_tab_control .tabBox button:last-child {
+  margin-right: 0px;
+}
+
+#SteakStake #Section3 .section_title .section_tab_control .tabBox button.active_btn {
+  background: var(--text-74);
+  color: var(--text-white);
+  padding: 4px;
+  display: inline-block;
+  border-radius: 5.9rem;
+}
 /*# sourceMappingURL=SteakStake.css.map */

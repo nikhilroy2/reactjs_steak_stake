@@ -21,6 +21,7 @@
   --text-900: #693900;
   --text-13: #321513;
   --text-74: #fab674;
+  --text-38: #9e6138;
   --family-dm: "DM Sans", sans-serif;
   --family-poppins: "Poppins", sans-serif;
 }
@@ -44,6 +45,13 @@ h2.title {
   font-size: 2.8rem;
   color: var(--text-900);
   margin-bottom: 1.6rem;
+}
+
+h4.title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-900);
+  margin-bottom: 1.2rem;
 }
 
 .section_container {
