@@ -1,0 +1,53 @@
+#SteakStake {
+  .section_body {
+    .section_flex {
+      display: flex;
+      align-items: center;
+      .flex_box {
+        flex-grow: 1;
+        padding: 0.9rem;
+        background: var(--text-white);
+        border-radius: 1rem;
+        &:first-child {
+          margin-right: 1.4rem;
+        }
+        .meat_box {
+          width: 14.3rem;
+          height: 11.6rem;
+          border-radius: 1rem;
+          padding: .9rem;
+          margin-right: 1.4rem;
+          background: linear-gradient(
+            90deg,
+            rgba(250, 183, 116, 0.1) -4.51%,
+            rgba(225, 152, 88, 0.1) 107.64%
+          );
+          //   opacity: 0.1;
+          box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
+          position: relative;
+          & > * {
+            display: block;
+            color: var(--text-900);
+          }
+          strong {
+            font-size: 1.3rem;
+            font-weight: 700;
+          }
+          span {
+            font-size: 0.9rem;
+          }
+          svg{
+              position: absolute;
+              top: .5rem;
+              right: .5rem;
+          }
+          .img_frame{
+              position: absolute;
+              bottom: 1.1rem;
+              right: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

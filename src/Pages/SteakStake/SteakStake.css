@@ -1,0 +1,61 @@
+#SteakStake .section_body .section_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#SteakStake .section_body .section_flex .flex_box {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0.9rem;
+  background: var(--text-white);
+  border-radius: 1rem;
+}
+
+#SteakStake .section_body .section_flex .flex_box:first-child {
+  margin-right: 1.4rem;
+}
+
+#SteakStake .section_body .section_flex .flex_box .meat_box {
+  width: 14.3rem;
+  height: 11.6rem;
+  border-radius: 1rem;
+  padding: .9rem;
+  margin-right: 1.4rem;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-4.51%, rgba(250, 183, 116, 0.1)), color-stop(107.64%, rgba(225, 152, 88, 0.1)));
+  background: linear-gradient(90deg, rgba(250, 183, 116, 0.1) -4.51%, rgba(225, 152, 88, 0.1) 107.64%);
+  -webkit-box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
+          box-shadow: 0px 4px 10px rgba(201, 148, 12, 0.1);
+  position: relative;
+}
+
+#SteakStake .section_body .section_flex .flex_box .meat_box > * {
+  display: block;
+  color: var(--text-900);
+}
+
+#SteakStake .section_body .section_flex .flex_box .meat_box strong {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+#SteakStake .section_body .section_flex .flex_box .meat_box span {
+  font-size: 0.9rem;
+}
+
+#SteakStake .section_body .section_flex .flex_box .meat_box svg {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+}
+
+#SteakStake .section_body .section_flex .flex_box .meat_box .img_frame {
+  position: absolute;
+  bottom: 1.1rem;
+  right: 1.2rem;
+}
+/*# sourceMappingURL=SteakStake.css.map */

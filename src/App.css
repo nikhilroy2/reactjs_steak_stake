@@ -17,7 +17,8 @@
   --text-100: #921100;
   --text-51: #374151;
   --text-white: #fff;
-  --text-23: #1D1B23;
+  --text-23: #1d1b23;
+  --text-900: #693900;
   --family-dm: "DM Sans", sans-serif;
   --family-poppins: "Poppins", sans-serif;
 }
@@ -35,6 +36,12 @@ ol {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+h2.title {
+  font-size: 2.8rem;
+  color: var(--text-900);
+  margin-bottom: 1.6rem;
 }
 
 .section_container {
