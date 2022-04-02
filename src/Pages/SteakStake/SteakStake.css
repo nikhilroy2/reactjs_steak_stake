@@ -524,12 +524,22 @@
   border-radius: 5.9rem;
 }
 
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list .token_empty {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-900);
+}
+
 #SteakStake #Section3 .section_body .section_body_content .lp_token_list > li {
   border-radius: 1rem;
   background: var(--text-white);
   padding: 1.3rem 2.1rem;
   margin-bottom: 1.4rem;
   position: relative;
+}
+
+#SteakStake #Section3 .section_body .section_body_content .lp_token_list > li:not(.token_empty) {
+  cursor: pointer;
 }
 
 #SteakStake #Section3 .section_body .section_body_content .lp_token_list > li::before {

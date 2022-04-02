@@ -340,9 +340,16 @@ const Section3 = () => {
   ];
 
   const [isDropdownEnabled, setIsDropdownEnabled] = useState();
-
+  // window.sessionStorage.removeItem("num");
   const dropdownDetailsHandle = (num) => {
     setIsDropdownEnabled(num);
+    if (isDropdownEnabled == 0) {
+      window.sessionStorage.removeItem("num");
+    }
+    if (window.sessionStorage.getItem("num") == num) {
+      setIsDropdownEnabled(0);
+    }
+    window.sessionStorage.setItem("num", num);
   };
   return (
     <section id="Section3">
@@ -356,13 +363,13 @@ const Section3 = () => {
             <div className="tabBox">
               <button
                 onClick={() => setTabActive(true)}
-                className={tabActive && "active_btn"}
+                className={tabActive ? 'active_btn': ''}
               >
                 Active
               </button>
               <button
                 onClick={() => setTabActive(false)}
-                className={!tabActive && "active_btn"}
+                className={!tabActive ? 'active_btn': ''}
               >
                 Inactive
               </button>
@@ -374,185 +381,193 @@ const Section3 = () => {
             <h4 className="title">LP token</h4>
           </div>
           <div className="section_body_content">
-            <ul className="lp_token_list">
-              {token_list_object.map((v) => {
-                return (
-                  <li key={v.id}>
-                    <div className="flex_list_box">
-                      <div className="list_box">
-                        <img
-                          style={{ marginRight: "1rem" }}
-                          src={v.token_img}
-                          alt=""
-                        />
-                        <div className="currency_content">
-                          <strong className="currency">{v.token_name}</strong>
-                          <span className="rank">{v.token_rank}</span>
+            {tabActive ? (
+              <ul className="lp_token_list">
+                {token_list_object.map((v) => {
+                  return (
+                    <li key={v.id} onClick={() => dropdownDetailsHandle(v.id)}>
+                      <div className="flex_list_box">
+                        <div className="list_box">
+                          <img
+                            style={{ marginRight: "1rem" }}
+                            src={v.token_img}
+                            alt=""
+                          />
+                          <div className="currency_content">
+                            <strong className="currency">{v.token_name}</strong>
+                            <span className="rank">{v.token_rank}</span>
 
-                          <div className="app_content">
-                            APR
-                            <strong>
-                              {v.app} <CalculatorsSvg></CalculatorsSvg>
-                            </strong>
+                            <div className="app_content">
+                              APR
+                              <strong>
+                                {v.app} <CalculatorsSvg></CalculatorsSvg>
+                              </strong>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div className="list_box">
-                        Earned
-                        <strong>{v.earned}</strong>
-                      </div>
-                      <div className="list_box">
-                        APR
-                        <strong>
-                          {v.app} <CalculatorsSvg></CalculatorsSvg>
-                        </strong>
-                      </div>
-                      <div className="list_box">
-                        Liquidity
-                        <strong>{v.liquidity}</strong>
-                      </div>
-                      <div className="list_box list_box_dropdown_details">
-                        <button
-                          className="btn_dropdown_details"
-                          onClick={() => dropdownDetailsHandle(v.id)}
-                        >
-                          <span>Details</span>
-                          {isDropdownEnabled == v.id ? (
-                            <svg
-                              style={{ transform: "scaleY(-1)" }}
-                              width={14}
-                              height={14}
-                              viewBox="0 0 14 14"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M7 8.75L7.41248 9.16248L7 9.57496L6.58752 9.16248L7 8.75ZM10.9125 5.66248L7.41248 9.16248L6.58752 8.33752L10.0875 4.83752L10.9125 5.66248ZM6.58752 9.16248L3.08752 5.66248L3.91248 4.83752L7.41248 8.33752L6.58752 9.16248Z"
-                                fill="#FAB674"
-                              />
-                            </svg>
-                          ) : (
-                            <svg
-                              width={14}
-                              height={14}
-                              viewBox="0 0 14 14"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M7 8.75L7.41248 9.16248L7 9.57496L6.58752 9.16248L7 8.75ZM10.9125 5.66248L7.41248 9.16248L6.58752 8.33752L10.0875 4.83752L10.9125 5.66248ZM6.58752 9.16248L3.08752 5.66248L3.91248 4.83752L7.41248 8.33752L6.58752 9.16248Z"
-                                fill="#FAB674"
-                              />
-                            </svg>
-                          )}
-                        </button>
-
-                        {/* for dropdown view letter */}
-                        {/* <ul className="dropdown_details_view"><li></li></ul> */}
-                      </div>
-                    </div>
-
-                    {isDropdownEnabled == v.id && (
-                      <div className="dropdown_content_box">
-                        <div className="content_box">
-                          <ul>
-                            <li className="sm_list">
-                              Earned
-                              <strong>{v.earned}</strong>
-                            </li>
-                            <li className="sm_list">
-                              Liquidity
-                              <strong>{v.liquidity}</strong>
-                            </li>
-                            <li>
-                              <strong>
-                                Withdraw Fee {v.details.withdraw_fee}
-                              </strong>
-                            </li>
-                            <li>
-                              <a
-                                href={v.details.get_idol_link}
-                                className="content_link"
-                              >
-                                Get IDOL{" "}
-                                <svg
-                                  stroke="currentColor"
-                                  fill="currentColor"
-                                  strokeWidth={0}
-                                  viewBox="0 0 512 512"
-                                  className="inline text-base ml-1"
-                                  height="1em"
-                                  width="1em"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    fill="none"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={32}
-                                    d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
-                                  />
-                                </svg>
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                href={v.details.view_contract_link}
-                                className="content_link"
-                              >
-                                View contract{" "}
-                                <svg
-                                  stroke="currentColor"
-                                  fill="currentColor"
-                                  strokeWidth={0}
-                                  viewBox="0 0 512 512"
-                                  className="inline text-base ml-1"
-                                  height="1em"
-                                  width="1em"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    fill="none"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={32}
-                                    d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
-                                  />
-                                </svg>
-                              </a>
-                            </li>
-                          </ul>
+                        <div className="list_box">
+                          Earned
+                          <strong>{v.earned}</strong>
                         </div>
-                        <div className="content_box">
-                          <div className="card_box">
+                        <div className="list_box">
+                          APR
+                          <strong>
+                            {v.app} <CalculatorsSvg></CalculatorsSvg>
+                          </strong>
+                        </div>
+                        <div className="list_box">
+                          Liquidity
+                          <strong>{v.liquidity}</strong>
+                        </div>
+                        <div className="list_box list_box_dropdown_details">
+                          <button
+                            className="btn_dropdown_details"
+                            // onClick={() => dropdownDetailsHandle(v.id)}
+                          >
+                            <span>Details</span>
+                            {isDropdownEnabled == v.id ? (
+                              <svg
+                                style={{ transform: "scaleY(-1)" }}
+                                width={14}
+                                height={14}
+                                viewBox="0 0 14 14"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7 8.75L7.41248 9.16248L7 9.57496L6.58752 9.16248L7 8.75ZM10.9125 5.66248L7.41248 9.16248L6.58752 8.33752L10.0875 4.83752L10.9125 5.66248ZM6.58752 9.16248L3.08752 5.66248L3.91248 4.83752L7.41248 8.33752L6.58752 9.16248Z"
+                                  fill="#FAB674"
+                                />
+                              </svg>
+                            ) : (
+                              <svg
+                                width={14}
+                                height={14}
+                                viewBox="0 0 14 14"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M7 8.75L7.41248 9.16248L7 9.57496L6.58752 9.16248L7 8.75ZM10.9125 5.66248L7.41248 9.16248L6.58752 8.33752L10.0875 4.83752L10.9125 5.66248ZM6.58752 9.16248L3.08752 5.66248L3.91248 4.83752L7.41248 8.33752L6.58752 9.16248Z"
+                                  fill="#FAB674"
+                                />
+                              </svg>
+                            )}
+                          </button>
+
+                          {/* for dropdown view letter */}
+                          {/* <ul className="dropdown_details_view"><li></li></ul> */}
+                        </div>
+                      </div>
+
+                      {isDropdownEnabled == v.id && (
+                        <div className="dropdown_content_box">
+                          <div className="content_box">
                             <ul>
-                              <li>
-                                <strong>PEACH earned</strong>
+                              <li className="sm_list">
+                                Earned
+                                <strong>{v.earned}</strong>
+                              </li>
+                              <li className="sm_list">
+                                Liquidity
+                                <strong>{v.liquidity}</strong>
                               </li>
                               <li>
-                                <span>{v.details.peach_earned_amount_1}</span>
+                                <strong>
+                                  Withdraw Fee {v.details.withdraw_fee}
+                                </strong>
                               </li>
                               <li>
-                                <span>{v.details.peach_earned_amount_2}</span>
+                                <a
+                                  href={v.details.get_idol_link}
+                                  className="content_link"
+                                >
+                                  Get IDOL{" "}
+                                  <svg
+                                    stroke="currentColor"
+                                    fill="currentColor"
+                                    strokeWidth={0}
+                                    viewBox="0 0 512 512"
+                                    className="inline text-base ml-1"
+                                    height="1em"
+                                    width="1em"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      fill="none"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth={32}
+                                      d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+                                    />
+                                  </svg>
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  href={v.details.view_contract_link}
+                                  className="content_link"
+                                >
+                                  View contract{" "}
+                                  <svg
+                                    stroke="currentColor"
+                                    fill="currentColor"
+                                    strokeWidth={0}
+                                    viewBox="0 0 512 512"
+                                    className="inline text-base ml-1"
+                                    height="1em"
+                                    width="1em"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      fill="none"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth={32}
+                                      d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+                                    />
+                                  </svg>
+                                </a>
                               </li>
                             </ul>
-                            <button className="btn_harvest">Harvest</button>
+                          </div>
+                          <div className="content_box">
+                            <div className="card_box">
+                              <ul>
+                                <li>
+                                  <strong>PEACH earned</strong>
+                                </li>
+                                <li>
+                                  <span>{v.details.peach_earned_amount_1}</span>
+                                </li>
+                                <li>
+                                  <span>{v.details.peach_earned_amount_2}</span>
+                                </li>
+                              </ul>
+                              <button className="btn_harvest">Harvest</button>
+                            </div>
+                          </div>
+                          <div className="content_box">
+                            <div className="card_box mx_0">
+                              <strong className="mb_sizer">
+                                Start Staking
+                              </strong>
+                              <button className="btn_connect_wallet">
+                                Connect Wallet
+                              </button>
+                            </div>
                           </div>
                         </div>
-                        <div className="content_box">
-                          <div className="card_box mx_0">
-                            <strong className="mb_sizer">Start Staking</strong>
-                            <button className="btn_connect_wallet">
-                              Connect Wallet
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : (
+              <ul className="lp_token_list">
+                <li className="token_empty">No farms staked.</li>
+              </ul>
+            )}
           </div>
         </div>
       </div>

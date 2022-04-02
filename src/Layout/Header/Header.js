@@ -166,8 +166,8 @@ export default Header;
 
 const HeaderAside = ({ navToggle, nav_list_menu, nav_list_user }) => {
   return (
-    <aside id="HeaderAside" className={navToggle && "HeaderAsideActive"}>
-      <div className={`aside_box_wrapper ${navToggle && "aside_active"}`}>
+    <aside id="HeaderAside" className={navToggle ? 'HeaderAsideActive': ''}>
+      <div className={`aside_box_wrapper ${navToggle ? 'aside_active': ''}`}>
         <ul className="nav_list_menu">
           {nav_list_menu.map((v) => {
             return (

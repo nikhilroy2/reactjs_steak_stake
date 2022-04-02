@@ -405,12 +405,21 @@
         $font_10: 1rem;
         $font_7: 0.717rem;
         .lp_token_list {
+
+          .token_empty{
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-900);
+          }
           & > li {
             border-radius: 1rem;
             background: var(--text-white);
             padding: 1.3rem 2.1rem;
             margin-bottom: 1.4rem;
             position: relative;
+            &:not(.token_empty){
+              cursor: pointer;
+            }
             &::before {
               content: "";
               position: absolute;
