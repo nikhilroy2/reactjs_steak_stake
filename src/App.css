@@ -84,5 +84,6 @@ h4.title {
   width: 100%;
   min-height: 2.3rem;
   cursor: pointer;
+  display: block;
 }
 /*# sourceMappingURL=App.css.map */

@@ -1,8 +1,13 @@
 // start responsive device
 // desktop 1024 max;
+// mobile max 640px
 #Header {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  @media (max-width: 1024px){
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
   background: rgba(255, 255, 255, 0.38);
   position: sticky;
   top: 0px;

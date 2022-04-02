@@ -10,6 +10,13 @@
   transition: 0.3s;
 }
 
+@media (max-width: 1024px) {
+  #Header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
 #Header.HeaderScrollActive {
   background: rgba(255, 255, 255, 0.7);
 }

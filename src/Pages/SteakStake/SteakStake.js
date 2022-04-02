@@ -27,7 +27,7 @@ const Section1 = () => {
                 <strong>Meat Earned</strong>
                 <strong>0.000</strong>
                 <span>~$0.0055</span>
-                <svg
+                <svg style={{cursor: 'pointer'}} title="title"
                   width={10}
                   height={10}
                   viewBox="0 0 10 10"

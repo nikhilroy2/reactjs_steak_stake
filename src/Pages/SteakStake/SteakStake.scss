@@ -9,13 +9,22 @@
       .section_flex {
         display: flex;
         align-items: center;
+        @media (max-width: 1024px) {
+          flex-wrap: wrap;
+        }
         .flex_box {
+          @media (max-width: 1024px) {
+            width: 100%;
+          }
           flex-grow: 1;
           padding: 0.9rem;
           background: var(--text-white);
           border-radius: 1rem;
           display: flex;
           padding-bottom: 1.5rem;
+          @media (max-width: 640px) {
+            flex-wrap: wrap;
+          }
           &.wallet_balance_flex {
             background: transparent;
             padding-bottom: 0rem;
@@ -24,6 +33,10 @@
           $font_sm: 0.873rem;
           &:first-child {
             margin-right: 1.4rem;
+            @media (max-width: 1024px) {
+              margin-right: 0rem;
+              margin-bottom: 1.4rem;
+            }
           }
           .meat_box {
             width: 14.3rem;
@@ -31,6 +44,15 @@
             border-radius: 1rem;
             padding: 0.9rem;
             margin-right: 1.4rem;
+            @media (max-width: 1024px) {
+              width: 50%;
+            }
+            @media (max-width: 640px) {
+              width: 100%;
+              margin-right: 0px;
+              margin-bottom: 1.4rem;
+            }
+
             background: linear-gradient(
               90deg,
               rgba(250, 183, 116, 0.1) -4.51%,
@@ -62,6 +84,7 @@
             }
           }
           .flex_box_list_content {
+            flex-grow: 1;
             strong {
               display: block;
               font-weight: 700;
@@ -94,6 +117,12 @@
           .wallet_balance_list {
             color: var(--text-900);
             width: 100%;
+            @media (max-width: 1024px) {
+              display: flex;
+            }
+            @media (max-width: 640px) {
+              flex-wrap: wrap;
+            }
             li {
               background: var(--text-white);
               margin-bottom: 1.4rem;
@@ -101,8 +130,22 @@
               display: flex;
               align-items: center;
               padding: 0.5rem 1.4rem 0.5rem 0rem;
+              @media (max-width: 1024px) {
+                margin-bottom: 0px;
+                flex-grow: 1;
+              }
+              @media (max-width: 640px) {
+                width: 100%;
+              }
               &:last-child {
                 margin-bottom: 0px;
+                @media (max-width: 1024px) {
+                  margin-left: 1.4rem;
+                }
+                @media (max-width: 640px) {
+                  margin-left: 0px;
+                  margin-top: 1.4rem;
+                }
               }
               .content_box {
                 margin-left: 0.816rem;
