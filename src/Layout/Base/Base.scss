@@ -4,10 +4,13 @@
     pointer-events: none;
     user-select: none;
     .design_left {
+      z-index: -1;
       position: absolute;
       top: 7.4rem;
     }
     .design_head {
+      z-index: -1;
+
       position: absolute;
       right: 8rem;
       top: 40%;

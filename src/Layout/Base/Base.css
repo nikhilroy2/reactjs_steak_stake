@@ -11,11 +11,13 @@
 }
 
 #Base .Base_design_wrapper .design_left {
+  z-index: -1;
   position: absolute;
   top: 7.4rem;
 }
 
 #Base .Base_design_wrapper .design_head {
+  z-index: -1;
   position: absolute;
   right: 8rem;
   top: 40%;
