@@ -27,7 +27,9 @@ const Section1 = () => {
                 <strong>Meat Earned</strong>
                 <strong>0.000</strong>
                 <span>~$0.0055</span>
-                <svg style={{cursor: 'pointer'}} title="title"
+                <svg
+                  style={{ cursor: "pointer" }}
+                  title="title"
                   width={10}
                   height={10}
                   viewBox="0 0 10 10"
@@ -378,9 +380,22 @@ const Section3 = () => {
                   <li key={v.id}>
                     <div className="flex_list_box">
                       <div className="list_box">
-                        <img src={v.token_img} alt="" />
-                        <strong className="currency">{v.token_name}</strong>
-                        <span className="rank">{v.token_rank}</span>
+                        <img
+                          style={{ marginRight: "1rem" }}
+                          src={v.token_img}
+                          alt=""
+                        />
+                        <div className="currency_content">
+                          <strong className="currency">{v.token_name}</strong>
+                          <span className="rank">{v.token_rank}</span>
+
+                          <div className="app_content">
+                            APR
+                            <strong>
+                              {v.app} <CalculatorsSvg></CalculatorsSvg>
+                            </strong>
+                          </div>
+                        </div>
                       </div>
                       <div className="list_box">
                         Earned
@@ -401,7 +416,7 @@ const Section3 = () => {
                           className="btn_dropdown_details"
                           onClick={() => dropdownDetailsHandle(v.id)}
                         >
-                          Details
+                          <span>Details</span>
                           {isDropdownEnabled == v.id ? (
                             <svg
                               style={{ transform: "scaleY(-1)" }}
@@ -441,6 +456,14 @@ const Section3 = () => {
                       <div className="dropdown_content_box">
                         <div className="content_box">
                           <ul>
+                            <li className="sm_list">
+                              Earned
+                              <strong>{v.earned}</strong>
+                            </li>
+                            <li className="sm_list">
+                              Liquidity
+                              <strong>{v.liquidity}</strong>
+                            </li>
                             <li>
                               <strong>
                                 Withdraw Fee {v.details.withdraw_fee}

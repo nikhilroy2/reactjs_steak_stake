@@ -421,23 +421,45 @@
               background: url("../../Static/img/img_token_side.png")
                 center/contain no-repeat;
             }
-            &:last-child {
-              margin-bottom: 0px;
-            }
+            // &:last-child {
+            //   margin-bottom: 0px;
+            // }
             .flex_list_box {
               display: flex;
               justify-content: space-between;
               align-items: center;
+
               .list_box {
                 &:nth-of-type(1) {
                   display: flex;
                   align-items: center;
+                  @media (max-width: 640px) {
+                    align-items: flex-start;
+                  }
                   .currency {
                     margin-left: 0.8rem;
                     margin-right: 0.8rem;
                     color: var(--text-900);
                     font-size: $font_10;
                     font-weight: 700;
+                    @media (max-width: 640px) {
+                      display: block;
+                      margin-left: 0px;
+                      margin-right: 0px;
+                    }
+                  }
+                  .app_content {
+                    font-size: $font_10;
+                    color: var(--text-900);
+                    display: none;
+                    width: 100%;
+                    margin-top: 1rem;
+                    @media (max-width: 640px) {
+                      display: block;
+                    }
+                    strong {
+                      display: block;
+                    }
                   }
                   .rank {
                     font-size: $font_9;
@@ -465,6 +487,13 @@
                     font-weight: 700;
                   }
                 }
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(4) {
+                  @media (max-width: 640px) {
+                    display: none;
+                  }
+                }
                 &:nth-of-type(5) {
                   button.btn_dropdown_details {
                     color: var(--text-74);
@@ -476,6 +505,11 @@
                     display: inline-flex;
                     align-items: center;
                     cursor: pointer;
+                    @media (max-width: 768px) {
+                      span {
+                        display: none;
+                      }
+                    }
                   }
                 }
               }
@@ -521,6 +555,21 @@
       li {
         margin-bottom: 0 !important;
         padding: 0px !important;
+      }
+      .sm_list{
+        display: none;
+        @media (max-width: 640px){
+          display: block;
+          font-size: 1rem;
+          strong{
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: block;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+          }
+        }
       }
       flex-grow: 1;
       color: var(--text-900);
