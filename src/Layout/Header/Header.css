@@ -177,7 +177,6 @@
   z-index: 1000;
   position: fixed;
   top: 0;
-  pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
